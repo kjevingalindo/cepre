@@ -1,6 +1,7 @@
+import ContactInfo from "./ContacInfo";
 import QuickLinks from "./QuickLinks";
-import ContactInfo from "./ContactInfo";
 import SocialLinks from "./SocialLinks";
+
 
 const Footer = () => {
   return (
