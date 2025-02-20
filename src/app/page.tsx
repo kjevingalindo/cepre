@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar setView={setView} />
-      <main className="flex-grow mt-16 pt-20">
+      <main className="flex-grow pt-20">
         {view === "home" && <HomePage />}
         {view === "other" && <OtherPage />}
       </main>

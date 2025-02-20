@@ -1,4 +1,4 @@
-import ContactInfo from "./ContacInfo";
+import ContactInfo from "./ContactInfo";
 import QuickLinks from "./QuickLinks";
 import SocialLinks from "./SocialLinks";
 
