@@ -2,7 +2,7 @@ import React from 'react'
 
 function OtherPage() {
   return (
-    <div>OtherPage</div>
+    <div>Precios</div>
   )
 }
 

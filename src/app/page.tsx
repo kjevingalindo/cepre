@@ -15,7 +15,6 @@ export default function Home() {
       <main className="flex-grow pt-20">
         {view === "home" && <HomePage />}
         {view === "other" && <OtherPage />}
-        {view === "register" && <RegisterForm />}
       </main>
       <Footer />
     </div>

@@ -7,7 +7,7 @@ import { containerVariants, itemVariants } from "./animations";
 export default function Hero() {
   return (
     <motion.div 
-      className="relative h-[500px] md:h-[500px] lg:h-[600px] overflow-hidden"
+      className="relative h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

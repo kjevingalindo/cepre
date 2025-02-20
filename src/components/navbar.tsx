@@ -44,8 +44,8 @@ const Navbar: React.FC<NavbarProps> = ({ setView }) => {
             setView={setView}
           />
           <ItemNavBar
-            text="Otra página"
-            targetView="other"
+            text="Precios"
+            targetView="precios"
             setView={setView}
           />
         </div>
