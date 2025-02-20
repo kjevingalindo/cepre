@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import HomePage from "@/components/landing/homePage";
 import OtherPage from "@/components/landing/otherPage";
 import Navbar from "@/components/navbar";
+import RegisterForm from "@/components/auth/RegisterForm";
 import { useState } from "react";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="flex-grow pt-20">
         {view === "home" && <HomePage />}
         {view === "other" && <OtherPage />}
+        {view === "register" && <RegisterForm />}
       </main>
       <Footer />
     </div>
