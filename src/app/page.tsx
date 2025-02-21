@@ -1,9 +1,8 @@
-"use client"
-import Footer from "@/components/Footer";
+"use client";
+import Navbar from "@/components/landing/components/navbar";
+import Footer from "@/components/landing/components/Footer";
 import HomePage from "@/components/landing/homePage";
-import OtherPage from "@/components/landing/otherPage";
-import Navbar from "@/components/navbar";
-import RegisterForm from "@/components/auth/RegisterForm";
+import Precios from "@/components/landing/Precios";
 import { useState } from "react";
 
 export default function Home() {
@@ -12,9 +11,9 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar setView={setView} />
-      <main className="flex-grow pt-20">
+      <main className="flex-grow">
         {view === "home" && <HomePage />}
-        {view === "other" && <OtherPage />}
+        {view === "precios" && <Precios />}
       </main>
       <Footer />
     </div>
