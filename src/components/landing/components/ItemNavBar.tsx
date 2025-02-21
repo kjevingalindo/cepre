@@ -11,7 +11,7 @@ const ItemNavBar: React.FC<ItemNavBarProps> = ({ text, targetView, setView }) =>
 
     return (
         <button
-            className={`text-gray-100 font-semibold text-lg hover:bg-orange-400 hover:text-gray-700 rounded-lg transition  py-1 px-2  ${targetView === "home" ? "font-bold" : ""}`}
+            className={`text-gray-100 font-semibold text-lg hover:bg-orange-400 hover:text-gray-800 rounded-lg transition  px-5 py-3 ${targetView === "home" ? "font-bold" : ""}`}
             onClick={handleClick}
         >
             {text}

@@ -29,7 +29,7 @@ const Navbar: React.FC<NavbarProps> = ({ setView }) => {
             className="font-semibold text-white flex items-center justify-center"
             onClick={() => setView("home")}
           >
-            <img src="/images/logo-cepre.png" alt="Logo del Centro Preuniversitario UNAJMA" width={90} height={90} className="mr-3 h-auto" />
+            <img src="/images/logo-cepre.png" alt="Logo del Centro Preuniversitario UNAJMA" width={90} height={90} className="mx-3 h-auto" />
             <span className="text-2xl">CEPRE UNAJMA</span>
           </button>
         </div>
@@ -39,10 +39,10 @@ const Navbar: React.FC<NavbarProps> = ({ setView }) => {
           <ItemNavBar text="Carreras" targetView="Carreras" setView={setView} />
         </div>
         <div className="hidden md:flex items-center space-x-2">
-          <a href="/auth/register" className="bg-white text-orange-700 px-4 py-2 rounded-md">
+          <a href="/auth/register" className="bg-[#fcfaf9] text-[#f15218] transition hover:-translate-y-1 hover:scale-105 font-semibold text-lg px-6 py-3 rounded-lg hover:bg-gradient-to-r from-white to-orange-100">
             Registrarme
           </a>
-          <a href="/auth/login" className="bg-orange-500 text-white px-4 py-2 rounded-md">
+          <a href="/auth/login" className="text-[#fcfaf9] border-2 transition hover:-translate-y-1 hover:scale-105 font-semibold text-lg px-6 py-2 rounded-lg hover:bg-gradient-to-r from-orange-500 to-orange-400">
             Ingresar
           </a>
         </div>
@@ -59,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ setView }) => {
           <ItemNavBar text="Inicio" targetView="home" setView={setView} />
           <ItemNavBar text="Precios" targetView="precios" setView={setView} />
           <ItemNavBar text="Carreras" targetView="Carreras" setView={setView} />
-          <a href="/auth/register" className="bg-white text-orange-700 px-4 py-2 rounded-md">
+          <a href="/auth/register" className="bg-[#fcfaf9] text-[#f15218] hover:bg-[#fcfb7f] font-semibold text-lg px-6 py-3 rounded-lg">
             Registrarme
           </a>
           <a href="/auth/login" className="bg-orange-500 text-white px-4 py-2 rounded-md">
