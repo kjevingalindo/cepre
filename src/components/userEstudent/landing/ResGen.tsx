@@ -4,10 +4,15 @@ import HeroStudent from './components/HeroStudent';
 
 
 
+
 function HomeDashboard(){
     return (
         <>
-            <HeroStudent name={''} matriculaCompleta={false} pagoCompleto={false} fechaExamen={''}/>
+            <HeroStudent 
+            name="Juan Pérez"
+            matriculaCompleta={true}
+            pagoCompleto={false}
+            fechaExamen="25 de Marzo, 2025"/>
         </>
     );
 }
