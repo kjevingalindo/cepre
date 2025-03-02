@@ -3,13 +3,12 @@ import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/components/landing/components/animations";
 
 interface HeroStudentProps {
-  name?: string;
-  matriculaCompleta?: boolean;
-  pagoCompleto?: boolean;
-  fechaExamen?: string;
+  name: string;
+  matriculaCompleta: boolean;
+  pagoCompleto: boolean;
+  fechaExamen: string;
 }
 
-// Configuración de estados con claves booleanas
 const statusConfig = {
   matricula: {
     true: { text: "Completa", icon: "✅" },
@@ -21,16 +20,7 @@ const statusConfig = {
   }
 } as const;
 
-interface StatusCardProps {
-  icon: string;
-  label: string;
-  status: { text: string; icon: string };
-}
-
-export default function HeroStudent({
-  name = "Estudiante",
-  fechaExamen = "No programado",
-}: HeroStudentProps) {
+export default function HeroStudent({ name, matriculaCompleta, pagoCompleto, fechaExamen }: HeroStudentProps) {
   return (
     <motion.div
       className="relative h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden"
@@ -38,7 +28,6 @@ export default function HeroStudent({
       initial="hidden"
       animate="visible"
     >
-      {/* Imagen de fondo optimizada */}
       <motion.div
         initial={{ scale: 1.2, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -55,7 +44,6 @@ export default function HeroStudent({
         />
       </motion.div>
 
-      {/* Contenido principal */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-center justify-center">
         <motion.div className="text-center text-white px-4 max-w-4xl" variants={itemVariants}>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow-lg">
@@ -66,12 +54,12 @@ export default function HeroStudent({
             <StatusCard
               icon="🎓"
               label="Matrícula"
-              status={statusConfig.matricula.true}
+              status={statusConfig.matricula[matriculaCompleta ? "true" : "false"]}
             />
             <StatusCard
               icon="💰"
               label="Pago"
-              status={statusConfig.pago.false}
+              status={statusConfig.pago[pagoCompleto ? "true" : "false"]}
             />
             <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm">
               <p className="text-lg font-medium mb-1">🗓 Examen programado</p>
@@ -92,7 +80,12 @@ export default function HeroStudent({
   );
 }
 
-// Componente StatusCard con validación segura
+interface StatusCardProps {
+  icon: string;
+  label: string;
+  status: { text: string; icon: string };
+}
+
 const StatusCard = ({ icon, label, status }: StatusCardProps) => (
   <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm">
     <div className="flex items-center gap-3 mb-2">
