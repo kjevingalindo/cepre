@@ -74,11 +74,7 @@ export default function HeroStudent({
               status={statusConfig.matricula[matriculaCompleta.toString() as StatusKey]}
             />
             
-            <StatusCard
-              icon="💰"
-              label="Estado de Pago"
-              status={statusConfig.pago[pagoCompleto.toString() as StatusKey]}
-            />
+            
             
             <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm">
               <p className="text-lg font-medium mb-1">🗓 Examen programado</p>
