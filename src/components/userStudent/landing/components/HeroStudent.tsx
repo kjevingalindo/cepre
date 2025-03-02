@@ -2,39 +2,34 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/components/landing/components/animations";
 
-
 interface HeroStudentProps {
-  name: string;
-  matriculaCompleta: boolean;
-  pagoCompleto: boolean;
-  fechaExamen: string;
+  name?: string;
+  matriculaCompleta?: boolean;
+  pagoCompleto?: boolean;
+  fechaExamen?: string;
 }
 
-// Configuración de estados con claves como strings
+// Configuración de estados con claves booleanas
 const statusConfig = {
   matricula: {
-    "true": { text: "Completa", icon: "✅" },
-    "false": { text: "Pendiente", icon: "⚠️" }
+    true: { text: "Completa", icon: "✅" },
+    false: { text: "Pendiente", icon: "⚠️" }
   },
   pago: {
-    "true": { text: "Completo", icon: "✅" },
-    "false": { text: "Faltan cuotas", icon: "⚠️" }
+    true: { text: "Completo", icon: "✅" },
+    false: { text: "Faltan cuotas", icon: "⚠️" }
   }
 } as const;
-
-type StatusKey = keyof typeof statusConfig.matricula;
 
 interface StatusCardProps {
   icon: string;
   label: string;
-  status: typeof statusConfig.matricula["true" | "false"];
+  status: { text: string; icon: string };
 }
 
 export default function HeroStudent({
-  name,
-  matriculaCompleta,
-  pagoCompleto,
-  fechaExamen,
+  name = "Estudiante",
+  fechaExamen = "No programado",
 }: HeroStudentProps) {
   return (
     <motion.div
@@ -51,7 +46,7 @@ export default function HeroStudent({
         className="absolute inset-0"
       >
         <Image
-          src="/images/student-dashboard-bg.jpg"
+          src="/images/logo-cepre.png"
           alt="Panel del estudiante"
           fill
           className="object-cover object-center"
@@ -71,11 +66,13 @@ export default function HeroStudent({
             <StatusCard
               icon="🎓"
               label="Matrícula"
-              status={statusConfig.matricula[matriculaCompleta.toString() as StatusKey]}
+              status={statusConfig.matricula.true}
             />
-            
-            
-            
+            <StatusCard
+              icon="💰"
+              label="Pago"
+              status={statusConfig.pago.false}
+            />
             <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm">
               <p className="text-lg font-medium mb-1">🗓 Examen programado</p>
               <p className="text-xl font-semibold">{fechaExamen}</p>
@@ -95,7 +92,7 @@ export default function HeroStudent({
   );
 }
 
-// Componente StatusCard con tipos seguros
+// Componente StatusCard con validación segura
 const StatusCard = ({ icon, label, status }: StatusCardProps) => (
   <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm">
     <div className="flex items-center gap-3 mb-2">
