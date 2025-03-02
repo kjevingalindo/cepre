@@ -1,6 +1,26 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { containerVariants, itemVariants } from "@/components/landing/components/animations";
+
+// Variantes de animación locales
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 120 }
+  }
+};
 
 interface HeroStudentProps {
   name: string;
@@ -50,7 +70,7 @@ export default function HeroStudent({ name, matriculaCompleta, pagoCompleto, fec
             Bienvenido, {name} <span className="text-orange-400">👋</span>
           </h1>
           
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8">
             <StatusCard
               icon="🎓"
               label="Matrícula"

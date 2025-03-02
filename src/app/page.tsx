@@ -1,8 +1,9 @@
 "use client";
-import Navbar from "@/components/landing/components/navbar";
-import Footer from "@/components/landing/components/Footer";
-import HomePage from "@/components/landing/homePage";
-import Precios from "@/components/landing/Precios";
+import Navbar from "../components/landing/components/navbar";
+import Footer from "../components/landing/components/Footer";
+import HomePage from "../components/landing/homePage";
+import Precios from "../components/landing/Precios";
+
 import { useState } from "react";
 
 export default function Home() {
