@@ -1,4 +1,4 @@
-import HeroStudent from "./components/HeroStudent";
+import HeroStudent from "./HeroStudent";
 
 const DashboardPage = () => {
   return (
