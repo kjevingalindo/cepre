@@ -1,4 +1,5 @@
-import DashboardPage from '@/src/components/userStudent/components/ResGen';
+
+import DashboardPage from '@/components/userStudent/ResGen';
 import React from 'react';
 
 export default function StudentDashboard() {
