@@ -1,11 +1,12 @@
-
-import DashboardPage from '@/components/userStudent/ResGen';
-import React from 'react';
+import SidebarDemo from "@/components/userStudent/components/prueba";
+import Dasboard from "@/components/userStudent/Dasboard";
+import React from "react";
 
 export default function StudentDashboard() {
   return (
     <div>
-        <DashboardPage/>
+      {/* <Dasboard /> */}
+      <SidebarDemo/>
     </div>
   );
 }
