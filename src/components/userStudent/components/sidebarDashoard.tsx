@@ -18,7 +18,7 @@ import UserTable from "./Table";
 import DataTable from "./Table";
 import Card from "./card";
 
-export default function SidebarDemo() {
+export default function SidebarStudent() {
   return (
     <div className="grid min-h-screen w-full grid-cols-[250px_1fr]">
       <AppSidebar />
