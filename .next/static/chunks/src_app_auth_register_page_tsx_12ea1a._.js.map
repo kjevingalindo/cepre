@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/X_siglo/Gestion%20de%20proyectos/cepreunajma/cepre/src/app/auth/register/page.tsx"],"sourcesContent":["\"use client\"\r\n\r\nimport { useState } from \"react\";\r\n\r\nexport default function FormPage() {\r\n    const [view, setView] = useState(\"login\");\r\n}\r\n\r\n"],"names":[],"mappings":";;;AAEA;;AAFA;;AAIe,SAAS;;IACpB,MAAM,CAAC,MAAM,QAAQ,GAAG,CAAA,GAAA,6JAAA,CAAA,WAAQ,AAAD,EAAE;AACrC;GAFwB;KAAA"}},
+    {"offset": {"line": 25, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
